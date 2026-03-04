@@ -1,24 +1,15 @@
-from fastapi import FastAPI, status
+from fastapi import FastAPI
 
 app = FastAPI()
 
-
-@app.get("/", status_code=200)
-def read_root():
-    """Health check endpoint"""
+@app.get("/")
+def health():
     return {"status": "healthy"}
 
-
-@app.get("/add/{a}/{b}", status_code=200)
+@app.get("/add/{a}/{b}")
 def add(a: float, b: float):
-    """
-    Add two numbers together.
-    
-    Parameters:
-    - a: First number
-    - b: Second number
-    
-    Returns:
-    - JSON object with the result
-    """
     return {"result": a + b}
+
+@app.get("/subtract/{a}/{b}")
+def subtract(a: float, b: float):
+    return {"result": a - b}
