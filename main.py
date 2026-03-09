@@ -33,10 +33,6 @@ def power(a: float, b: float):
 def triangle(base: float, height: float):
     return {"result": (base * height)/2}
 
-@app.get("/rectangle/{length}/{width}")
-def square(a: float):
-    return {"result": a ** 2}
-
 @app.get("/average/{a}/{b}/{c}")
 def average(a: float, b: float, c: float):
     return {"result": (a + b + c)/3}
