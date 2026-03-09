@@ -13,3 +13,12 @@ def add(a: float, b: float):
 @app.get("/subtract/{a}/{b}")
 def subtract(a: float, b: float):
     return {"result": a - b}
+
+@app.get("/multiply/{a}/{b}")
+def multiply(a: float, b: float):
+    return {"result": a * b}
+
+@app.get("/divide/{a}/{b}")
+def divide(a: float, b: float):
+    return {"result": a / b}
+    
