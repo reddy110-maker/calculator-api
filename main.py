@@ -21,4 +21,15 @@ def multiply(a: float, b: float):
 @app.get("/divide/{a}/{b}")
 def divide(a: float, b: float):
     return {"result": a / b}
-    
+
+@app.get("/power/{a}/{b}")
+def power(a: float, b: float):
+    return {"result": a ** b}
+
+@app.get("/triangle/{base}/{height}")
+def triangle(base: float, height: float):
+    return {"result": (base * height)/2}
+
+@app.get("/rectangle/{length}/{width}")
+def square(a: float):
+    return {"result": a ** 2}
